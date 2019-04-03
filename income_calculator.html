@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Income Calculator</title>
+</head>
+
+<body>
+<h1>Income Tax Calculator</h1>
+</body>
+
+
+
+<script>
+
+// 0-18,200 = 1 10 10 
+// 18,201-37,000 = 10 5 10 = $1,482
+// 37,001-90,000 = 10 10 10 = $8,447
+// 90,001-180,000 = 10 10 20 = $25,997
+// 180,001-100,000,000 = 20 20 20 = $160,432
+
+var pay= window.prompt("What is your hourly wage?");
+var hours_worked= window.prompt("How many hours do you work per day?")
+var days_worked= window.prompt("How many days do you work in a week?")
+
+var daily_income=pay*hours_worked;
+var weekly_income=pay*hours_worked*days_worked;
+var yearly_income=weekly_income*52;
+
+document.write("Daily income = $" + daily_income + "<br>");
+document.write("Weekly income = $" + weekly_income + "<br>");
+document.write("Yearly income = $" + yearly_income + "<br>");
+document.write("<br>")
+
+if(0<yearly_income && yearly_income<18200) { 
+    document.write("You're poor lol." + "<br>");
+    document.write("You don't have an income tax because you earn less than $182,01.");
+}
+
+if(18201<yearly_income && yearly_income<37000) {
+    a = (19/100) * (yearly_income - 18200);
+    document.write("Your income tax threshold is $18,201 to $37,000." + "<br>");
+    document.write("You are taxed at a rate of 19c for each $1 over $18,200." +"<br>");
+    document.write("Your income tax is $" + a + ".");  
+}
+
+if(37001<yearly_income && yearly_income<90000) {
+    b = (32.5 / 100) * (yearly_income - 37000) + 3572;
+    document.write("Your income tax threshold is $37,001 to $90,000." + "<br>");
+    document.write("You are taxed at a rate of 32.5c for each $1 over $37,000 plus $3,572." +"<br>");
+    document.write("Your income tax is $" + b +".");  
+}
+
+if(90001<yearly_income && yearly_income<180000) {
+    c = (37 / 100) * (yearly_income - 90000) + 20797
+    document.write("Your income tax threshold is $90,001 to $180,000." + "<br>");
+    document.write("You are taxed at a rate of 37c for each $1 over $90,000 plus $20,797." +"<br>");
+    document.write("Your income tax is $" + c + ".");  
+}
+
+if(180001<yearly_income && yearly_income<100000000) {
+    d= (45/100) * (yearly_income - 180000) + 54097
+    document.write("Your income tax threshold is $180001 and above." + "<br>");
+    document.write("You are taxed at a rate of 45c for each $1 over $180,000 plus $54,097." +"<br>");
+    document.write("Your income tax is $" + d + ".");  
+}
+
+if(yearly_income>100000001) {
+    document.write("Your a greedy mother fucker. Piss off i'm not telling u shit.")
+}
+</script>
+
+<p>Click the picture of Barry to return to the main menu or click the picture of Clive to restart the income tax calculator.</p>
+<a href="index.html"><img src ="barrycopy.jpg" width="500">
+<a href="income_calculator.html"><img src ="clive.png" width="792">
+
+    </html>
+
+<style>
+body{
+    background-color: #4274ff;
+}
+
+h1{
+    color: #19ff9fe7;
+}
+
+p {
+    color: #19ff9fe7;
+}
+
+</style>
