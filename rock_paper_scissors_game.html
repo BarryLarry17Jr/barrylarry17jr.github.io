@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>
+            Rock Paper Scissors Game
+        </title>
+    </header>
+<body>
+
+</body>
+
+
+<style>
+.title {
+        color: #00a3a3;
+}
+
+body {
+        background-color: rgba(20, 34, 34, 0.692);
+}
+
+</style>
+
+<script>
+player1=window.prompt("Player 1: What's your name?")
+player2=window.prompt("Player 2: What's your name?")
+p1= window.prompt(player1 + " Type: rock, paper or scissors");
+p2= window.prompt(player2 + " Type: rock, paper or scissors");
+
+//tie:
+//Rock + Rock
+//Paper + Paper
+//Scissors + Scissors
+
+//p1 win
+//rock + scissors
+//paper + rock
+//scissors + paper
+
+//p2 win
+//rock + scissors
+//paper + rock
+//scissors + paper
+
+//------------------------------------------
+if (p1=="rock" && p2=="rock") {
+        document.write("It's a tie! <br />")
+}
+
+if (p1=="paper" && p2=="paper") {
+        document.write("It's a tie. <br />")
+}
+
+if (p1=="scissors" && p2=="scissors ") {
+        document.write("It's a tie. <br /> ")
+}
+//------------------------------------------
+if (p1=="rock" && p2=="scissors") {
+    document.write(player1 + " wins! <br /> ")
+}
+
+if (p1=="paper" && p2=="rock") {
+    document.write(player1 + " wins! <br /> ")
+}
+
+if (p1=="scissors" && p2=="paper") {
+    document.write(player1 + " wins! <br /> ")
+}
+//------------------------------------------
+if (p1=="scissors" && p2=="rock") {
+        document.write(player2 + " wins! <br /> ")
+}
+
+if (p1=="rock" && p2=="paper") {
+        document.write(player2 + " wins! <br /> ")
+}
+
+if (p1=="paper" && p2=="scissors") {
+         document.write(player2 + " wins! <br /> ")
+}
+//------------------------------------------
+end = (player1 + " chose " + p1 + " and " + player2 + " chose " +p2 + ".")
+document.write(end)
+</script>
+<p>Click Barry to return to the main menu or click the Beligum health minister to start again</p>
+<a href = "index.html"><img src = "barrycopy.jpg" width="400">
+<a href = "rock_paper_scissors_game.html"><img src="belgium.jpg" width="450" height="355">
+</html>
