@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>
+            Higher or Lower
+        </title>
+    </header>
+ <body>
+
+    
+
+    <div class = "title">
+        <h1>Higher or Lower</h1>
+    </div>
+
+    <div class = "sub">
+        <h2>Rules</h2>
+    </div>
+
+ <div class = "text">
+    <p> The rules are simple. You are trying to guess a number between 2 of the numbers of your choice. 
+            Once you have guessed you will be given higher or lower. 
+            The game ends when you have correctly guessed the given number.
+     </p>
+
+
+
+</div>
+
+<form id="form1">
+    Min: <input name="name" type="text" size="20">
+ <button onclick="outputname()">Submit</button>
+ <br>
+ <br>
+ <form id="form2">
+        Max: <input name="nam" type="text" size="20">
+</form>
+</body>
+</html>
+<script>
+
+function outputname() {
+var x,y,p,w,name,nam;
+x=document.getElementById("form1") ;
+y=x.elements["name"].value;
+p=document.getElementById("form2") ;
+w=p.elements["nam"].value;
+document.write(nam+name)
+}
+
+
+
+
+number=Math.floor(Math.random () * (+max - +min)) + +min;
+document.write(number)
+    if(number<choice) {
+        prompt("Lower");
+}
+
+    if(number>choice) {
+        prompt("Higher");
+}
+if(number==choice) {
+    document.write("Correct the number was " + number);
+}
+
+
+
+
+
+
+
+
+
+</script>
+<style>
+
+.title {
+    color: #00ccff;
+}
+
+body {
+    background-color: #611a1a;
+}
+
+.sub {
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+
