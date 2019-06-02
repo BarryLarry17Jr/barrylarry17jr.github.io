@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>BAC Calculator</title>
+    </header>
+
+    <body>
+
+    </body>
+</html>
+
+<style>
+
+
+
+
+
+
+
+</style>
+
+
+<script>
+
+drinks=window.prompt("How many standard drinks have you consumed?")
+consumption=(drinks*10)
+bodyweightkg=window.prompt("What is your weight in Kilograms?")
+genderq=window.prompt("Are you male or female?")
+
+if (genderq="male") {
+    gender=0.68
+}
+bodyweight=(bodyweightkg/1000)
+
+two=(bodyweight*gender)
+three=(consumption/two)
+bac=(three*100)
+
+document.write(bac)
+
+</script>
