@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<header>
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>
+        3 Doors
+    </title>
+</header>
+
+<body>
+
+
+
+
+</body>
+
+<style>
+
+
+
+</style>
+
+<script>
+
+door=Math.floor((Math.random() * 3) + 1);
+num=Math.floor((Math.random() * 2) + 1);
+
+
+
+
+pick1=window.prompt("Choose between doors 1, 2 and 3")
+
+if (num==1 && door==pick1 && pick1==1) {
+    x=2
+    c=3
+}
+
+if (num==2 && door==pick1 && pick1==1) {
+    x=3
+    c=2
+}
+
+
+if (num==1 && door==pick1 && pick1==2) {
+    x=1
+    c=3
+}
+
+if (num==2 && door==pick1 && pick1==2) {
+    x=3
+    c=1
+}
+
+
+if (num==1 && door==pick1 && pick1==3) {
+    x=1 
+    c=2
+}
+
+if (num==2 && door==pick1 && pick1==3) {
+    x=2 
+    c=1
+}
+////////////////////////////////////////////
+if (pick1==1 && door==3) {
+    x=2
+    c=3
+}
+
+if (pick1==1 && door==2) {
+    x=3
+    c=2
+}
+
+if (pick1==2 && door==3) {
+    x=1
+    c=3
+}
+
+if (pick1==2 && door==1) {
+    x=3
+    c=1
+}
+
+if (pick1==3 && door==1) {
+    x=2
+    c=1
+}
+
+if (pick1==3 && door==2) {
+    x=1
+    c=2
+}
+////////////////////////////////////////////
+
+
+
+switchy=window.prompt("It is not door " + x + ". Would you like to switch to door " + c +  ", yes or no.")
+
+
+if (switchy=="no" && pick1==door) {
+    alert("Congradulations! Door number " + door + " is correct!")
+}
+    if (switchy=="no" && pick1==!door){
+    alert("Unlucky. The correct door was number " + door + ". You remained with your original decison of door number" + pick1 + ".")
+}
+
+
+
+if (pick1==!door) {
+    alert("Unlucky. The correct door was number " + door + ". You remained with your original decison of door number" + pick1 + ".")
+}
+
+
+if (switchy=="yes" && c==door) {
+    alert("Congradulations! Door number " + door + " is correct!")
+}
+
+if (switchy=="yes" && c==!door) {
+    alert("Unlucky. The correct door was number " + door + ". You switched to door number" + pick1 + ".")
+}
+
+
+</script>
+
+</html>
