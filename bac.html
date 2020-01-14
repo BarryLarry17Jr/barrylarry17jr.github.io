@@ -6,7 +6,10 @@
     </header>
 
     <body>
-
+       
+        <p>Your BAC is:</p>
+        
+            
     </body>
 </html>
 
@@ -35,7 +38,7 @@ two=(bodyweight*gender)
 three=(consumption/two)
 bac=(three*100)
 
-window.alert("Your BAC is a " + bac)
+
 
 }
 
@@ -52,8 +55,12 @@ three=(consumption/two)
 bac=(three*100)
 
 
-window.alert("Your BAC is a " + bac)
 
+
+}
+
+function done () {
+    document.write(bac)
 }
 
 dog=window.prompt("Are you male or female?")
@@ -68,5 +75,7 @@ if (dog==dog1){
 if (dog==dog2) {
     female()
     }
+
+done()
 
 </script>
