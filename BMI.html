@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI Calcultor</title>  
+    </head>
+
+<body>
+    <div class=title>
+        <h1>Body Mass Index Calculator</h1>
+    </div>
+
+    <div class="text">
+        <p>
+            BMI or body mass index, is an approximate measure of whether someone is over- or underweight.
+            <br>The conversion graph is shown below:</br>
+        </p>
+    <img src="bands.png" width="800">
+    </div>
+
+
+    <div class="text">
+        <p>
+            Please input your your height and weight below in order to calculate your BMI:
+        </p>
+
+    <div class="semitext">
+        <p id ="showanswer"></p>
+    </div>
+
+<input type="text" class="button1" placeholder= "Height (cm)" id="height">
+
+<input type="text" class="button1" placeholder= "Weight (kg)" id="weight">
+
+<button type="button" class="button" onclick="input()">Calculate BMI</button>
+
+
+</body>
+
+
+</html>
+
+<style>
+
+.title {
+    color: #0de44d;
+    font-size: 30px;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+.text {
+    color: rgb(163, 0, 141);
+    font-size: 25px;
+}
+
+p
+
+.semitext {
+    color: rgb(255, 1, 1);
+}
+
+.button {
+    background-color: #0de44d;
+    color: cadetblue;
+    border: 0;
+    padding: 3px;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.button1 {
+
+    color: cadetblue;
+    border: 0;
+    padding: 3px;
+    vertical-align: middle;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+</style>
+
+
+
+<script>
+ 
+ function input () {
+ var height1 = document.getElementById("height").value;
+ var weight1 = document.getElementById("weight").value;
+
+ var weight = weight1;                  
+ var height = (height1/100)*(height1/100);
+ 
+ var bmi = (weight/height);
+ var answer = bmi
+ 
+ if (bmi>30) {
+    document.getElementById("showanswer").innerHTML="Your BMI is "+bmi+", it places you in the obese section.";
+ }
+
+ if (bmi>25 && 30>bmi) {
+    document.getElementById("showanswer").innerHTML="Your BMI is "+bmi+", it places you in the overweight section.";
+ }
+
+ if (bmi>18.5 && 25>bmi) {
+    document.getElementById("showanswer").innerHTML="Your BMI is "+bmi+", it places you in the normal weight section.";
+ }
+ 
+ if (bmi<18.5 && bmi>0) {
+    document.getElementById("showanswer").innerHTML="Your BMI is "+bmi+", it places you in the underweight section.";
+}
+}
+
+
+
+ 
+
+</script>
