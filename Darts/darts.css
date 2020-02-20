@@ -1,0 +1,12 @@
+.title{
+    color: rgb(255, 0, 0);
+}
+
+hr {
+    width: 150px;
+    margin-left: 0px;
+}
+
+body {
+    background-color: orange;
+}
